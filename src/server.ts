@@ -17,6 +17,7 @@ app.use(express.json());
 // API Endpoints Mapping
 app.use('/api/auth', authRoutes);
 app.use('/api/agents', agentRoutes);
+app.use('/api/items', agentRoutes); // 🎯 এই লাইনটি যুক্ত করা হয়েছে!
 
 // Basic Route
 app.get('/', (req: Request, res: Response) => {

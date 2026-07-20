@@ -7,7 +7,7 @@ const AgentSchema = new Schema({
   price: { type: String, required: true },
   category: { type: String, required: true, default: 'Data Analyzer' },
   imageUrl: { type: String, default: '' },
-  userId: { type: Schema.Types.ObjectId, ref: 'User', required: true }
+  userId: { type: Schema.Types.ObjectId, ref: 'User', required: false } // 🎯 required: false করা হয়েছে
 }, { timestamps: true });
 
 export default mongoose.models.Agent || mongoose.model('Agent', AgentSchema);
